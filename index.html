@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio Climático </title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h2> CAMBIO CLIMÁTICO</h2>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="pagina1.html">Consecuencias</a>
+            <a href="pagina2.html">Soluciones</a>
+        </nav>
+    </header>
+
+    <section class="portada">
+        <div class="portada-texto">
+            <p class="etiqueta"> CUIDEMOS NUESTRO HOGAR</p>
+            <h1> Cambio climático, la enfermedad que le estamos provocando a nuestro planeta</h1>
+            <p>El cambio climático es un desafío que nos afecta a todos.
+            Conocerlo es el primer paso para construir un futuro mejor.</p>
+            <a class="boton" href="#informacion">Descubrir más ↓</a>
+        </div>
+        <div class="planeta"></div>
+    </section>
+
+    <main id="informacion">
+        <h2>¿Qué es el cambio climático?</h2>
+        <p class="introduccion">
+            Es la modificación a largo plazo de las temperaturas y los patrones
+            del clima. Actualmente, las actividades humanas contribuyen
+            considerablemente al calentamiento global.
+        </p>
+
+        <div class="tarjetas">
+            <article class="tarjeta verde">
+                <div class="icono"></div>
+                <h3>Contaminación</h3>
+                <p>La quema de combustibles fósiles libera gases que atrapan
+                calor en la atmósfera.</p>
+            </article>
+
+            <article class="tarjeta naranja">
+                <div class="icono"></div>
+                <h3>Deforestación</h3>
+                <p>La pérdida de bosques reduce la capacidad de la naturaleza
+                para absorber dióxido de carbono.</p>
+            </article>
+
+            <article class="tarjeta morada">
+                <div class="icono"></div>
+                <h3>Aumento de temperatura</h3>
+                <p>El calentamiento global favorece olas de calor y afecta
+                los ecosistemas.</p>
+            </article>
+        </div>
+
+        <section class="dato">
+            <span></span>
+            <div>
+                <h2>¡Cada acción cuenta!</h2>
+                <p>Ahorrar energía, evitar desperdicios y cuidar la naturaleza
+                son formas de contribuir al cambio.</p>
+            </div>
+        </section>
+
+        <section class="cuestionario">
+            <h2> ¡Pon a prueba tus conocimientos!</h2>
+            <p>¿Cuál de estas acciones ayuda al planeta?</p>
+            <button onclick="responder(false)">Dejar las luces encendidas</button>
+            <button onclick="responder(true)">Caminar en trayectos cortos</button>
+            <button onclick="responder(false)">Desperdiciar agua</button>
+            <p id="resultado"></p>
+        </section>
+
+        <section class="final">
+            <h2> El futuro también depende de ti</h2>
+            <p>Explora las otras páginas para conocer las consecuencias
+            y descubrir soluciones para cuidar nuestro planeta.</p>
+            <a class="boton" href="pagina1.html">Explorar consecuencias →</a>
+        </section>
+    </main>
+
+    
+<section class="video-seccion">
+    <p class="etiqueta"> APRENDE Y DESCUBRE</p>
+    <h2>¿Qué es el cambio climático?</h2>
+    <p>Conoce cómo las actividades humanas están cambiando el clima de la Tierra.</p>
+
+    
+<div class="video-contenedor">
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/Iw6hK7TQ9mU"
+        title="Video sobre el cambio climático"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; encrypted-media; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+    <p class="fuente-video">Fuente: NMÁS noticias.</p>
+</section>
+
+    <footer>
+        <p>  Portafolio sobre el cambio climático</p>
+    </footer>
+
+    <script>
+        function responder(correcto) {
+            const resultado = document.getElementById("resultado");
+
+            if (correcto) {
+                resultado.textContent = "¡Correcto!  Caminar reduce emisiones en trayectos cortos.";
+                resultado.style.color = "#176b52";
+            } else {
+                resultado.textContent = "¡Inténtalo otra vez!  Elige una acción que cuide los recursos.";
+                resultado.style.color = "#c14f38";
+            }
+        }
+    </script>
+
+</body>
+</html>

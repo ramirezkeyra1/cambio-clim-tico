@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones | Planeta en acción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h2> PLANETA EN ACCIÓN</h2>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="pagina1.html">Consecuencias</a>
+            <a href="pagina2.html">Soluciones</a>
+        </nav>
+    </header>
+
+    <section class="portada" style="background: linear-gradient(135deg, #dff5df, #dff3ff, #fff0df);">
+        <div class="portada-texto">
+            <p class="etiqueta"> PEQUEÑAS ACCIONES, GRANDES CAMBIOS</p>
+            <h1>¡Sé parte de la solución!</h1>
+            <p>Cuidar nuestro planeta comienza con las decisiones
+            que tomamos todos los días. ¡Descubre cómo ayudar!</p>
+            <a class="boton" href="#reto">Comenzar mi reto ↓</a>
+        </div>
+        <div class="planeta"></div>
+    </section>
+
+    <main>
+        <h2>6 formas de ayudar al planeta</h2>
+        <p class="introduccion">
+            Cada persona puede contribuir a reducir su impacto ambiental
+            mediante hábitos responsables y decisiones conscientes.
+        </p>
+
+        <div class="tarjetas">
+            <article class="tarjeta verde">
+                <div class="icono"></div>
+                <h3>Ahorra energía</h3>
+                <p>Apaga las luces que no necesitas y aprovecha la luz natural.</p>
+            </article>
+
+            <article class="tarjeta naranja">
+                <div class= </div>
+                <h3>Muévete de forma sostenible</h3>
+                <p>Camina, utiliza la bicicleta o el transporte público cuando sea posible.</p>
+            </article>
+
+            <article class="tarjeta morada">
+                <div class=</div>
+                <h3>Reduce los residuos</h3>
+                <p>Reutiliza objetos, separa los residuos y evita productos desechables.</p>
+            </article>
+
+            <article class="tarjeta naranja">
+                <div class=</div>
+                <h3>Cuida el agua</h3>
+                <p>Cierra la llave cuando no la utilices y repara las fugas.</p>
+            </article>
+
+            <article class="tarjeta verde">
+                <div class=</div>
+                <h3>Protege la naturaleza</h3>
+                <p>Cuida las áreas verdes y evita tirar basura en espacios naturales.</p>
+            </article>
+
+            <article class="tarjeta morada">
+                <div class=</div>
+                <h3>Consume responsablemente</h3>
+                <p>Compra solo lo necesario y elige productos duraderos cuando puedas.</p>
+            </article>
+        </div>
+
+        <section class="cuestionario" id="reto">
+            <h2> Mi reto verde</h2>
+            <p>Marca las acciones que te comprometes a realizar.
+            ¡Observa cómo aumenta tu progreso!</p>
+
+            <div class="acciones">
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Apagar las luces que no necesito.
+                </label>
+
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Evitar desperdiciar agua.
+                </label>
+
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Separar y reciclar mis residuos.
+                </label>
+
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Evitar bolsas y productos desechables.
+                </label>
+
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Mantener limpios los espacios naturales.
+                </label>
+
+                <label class="accion">
+                    <input type="checkbox" class="tarea">
+                     Elegir un transporte menos contaminante cuando sea posible.
+                </label>
+            </div>
+
+            <p id="progreso-texto">Llevas 0 de 6 acciones completadas.</p>
+
+            <div class="barra-progreso">
+                <div id="barra"></div>
+            </div>
+
+            <p id="mensaje-reto">¡Tú puedes comenzar hoy! </p>
+
+            <button class="boton" id="reiniciar" type="button">
+                Reiniciar mi reto ↻
+            </button>
+        </section>
+
+        <section class="dato">
+            <span></span>
+            <div>
+                <h2>El cambio empieza contigo</h2>
+                <p>Además de cambiar nuestros hábitos, es importante apoyar
+                iniciativas comunitarias y políticas que reduzcan las emisiones
+                y protejan el medio ambiente.</p>
+            </div>
+        </section>
+
+        <section class="final">
+            <h2> ¡Gracias por cuidar nuestro hogar!</h2>
+            <p>Aprender sobre el cambio climático nos ayuda a tomar mejores
+            decisiones y a construir un futuro más sostenible.</p>
+            <a class="boton" href="index.html">Volver al inicio →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p> Portafolio sobre el cambio climático</p>
+        <p><a href="index.html" style="color: white;">← Volver al inicio</a></p>
+    </footer>
+
+    <script>
+        const tareas = document.querySelectorAll(".tarea");
+        const textoProgreso = document.getElementById("progreso-texto");
+        const barra = document.getElementById("barra");
+        const mensaje = document.getElementById("mensaje-reto");
+        const reiniciar = document.getElementById("reiniciar");
+
+        function actualizarProgreso() {
+            const completadas = document.querySelectorAll(".tarea:checked").length;
+            const total = tareas.length;
+            const porcentaje = (completadas / total) * 100;
+
+            textoProgreso.textContent =
+                `Llevas ${completadas} de ${total} acciones completadas (${porcentaje}%).`;
+
+            barra.style.width = porcentaje + "%";
+
+            if (completadas === total) {
+                mensaje.textContent = "¡Increíble! Has completado todo tu reto verde. ";
+            } else if (completadas >= 3) {
+                mensaje.textContent = "¡Vas muy bien! Sigue sumando buenas acciones. ";
+            } else {
+                mensaje.textContent = "¡Cada pequeña acción cuenta! ";
+            }
+        }
+
+        tareas.forEach(function(tarea) {
+            tarea.addEventListener("change", actualizarProgreso);
+        });
+
+        reiniciar.addEventListener("click", function() {
+            tareas.forEach(function(tarea) {
+                tarea.checked = false;
+            });
+
+            actualizarProgreso();
+        });
+
+        actualizarProgreso();
+    </script>
+
+</body>
+</html>
